@@ -35,13 +35,14 @@ body {
   font-size: 14px;
   min-height: 100%;
   min-width: 300px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
   display: flex;
   flex-direction: column;
   background-image: url("/img/background2.svg");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 /* ? NAVBAR ********************************************************/
@@ -62,6 +63,7 @@ nav {
   min-height: 40px;
   max-height: 60px;
   top: 0;
+  overflow-x: hidden;
 
   overflow-y: hidden;
   z-index: 5;
@@ -93,6 +95,7 @@ nav ul {
   height: 100%;
   width: 57%;
   list-style: none;
+  overflow: hidden;
 }
 
 nav li {
@@ -205,10 +208,18 @@ nav li a:hover {
 
 main {
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 82vh;
-  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+div.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  height: 100%;
+  /* overflow-y: auto; */
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -489,7 +500,7 @@ blockquote {
 /** FOOTER ***********************************************/
 
 footer {
-  /* margin-top: auto; */
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: center;
