@@ -230,11 +230,16 @@ main {
   padding: 20px;
 
   /* overflow-y: auto; */
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
   color: #c0c0c0;
   /* box-shadow: 0px 0px 2px #000; */
+}
+
+main.blog-bg {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
 }
 
 section {
