@@ -25,61 +25,65 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-html {
-  height: 100%;
-}
-
+html,
 body {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
+
+  height: 100%;
+  background-attachment: fixed;
+  background-image: url("/img/background2.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  height: 100%;
   min-height: 100%;
-  min-width: 300px;
-  /* overflow-x: hidden;
-  overflow-y: hidden; */
   display: flex;
   flex-direction: column;
-  background-image: url("/img/background2.svg");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* ? NAVBAR ********************************************************/
 
 nav {
+  /* min-height: 40px; */
+  height: 7vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  font-weight: 400;
+  font-weight: lighter;
   font-size: 12px;
 
   background-color: #313131;
 
   box-shadow: 0px 0px 2px black;
 
-  height: 8vh;
-  min-height: 40px;
-  max-height: 60px;
-  top: 0;
-  overflow-x: hidden;
-
-  overflow-y: hidden;
   z-index: 5;
 }
 
 /* LOGO ******************************************************/
 
 .shadow {
-  -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.7));
   /* Similar syntax to box-shadow */
 }
 
 .logo {
+  max-height: 70px;
+  min-height: 40px;
+
+  /* width: 100%; */
   height: 100%;
-  padding: 5px;
+  padding: 8px;
 }
 
 .logo:hover {
@@ -92,14 +96,18 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-around;
-  height: 100%;
+  align-items: center;
+  align-self: stretch;
+  /* height: 100%; */
   width: 57%;
   list-style: none;
-  overflow: hidden;
 }
 
 nav li {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
   width: 100%;
 }
 
@@ -107,13 +115,15 @@ nav li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: stretch;
+  width: 100%;
+
   color: #c0c0c0;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  height: 100%;
-  width: 100%;
-  text-shadow: 0px 1px 3px #000;
+
+  text-shadow: 0px 0px 8px #000;
   transition: letter-spacing 0.4s ease-out;
 }
 
@@ -177,7 +187,8 @@ nav li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transform: translateX(100%);
+    transform-origin: top right;
+    transform: scale(0);
     transition: transform 0.4s ease-in-out;
   }
 }
@@ -185,7 +196,8 @@ nav li a:hover {
 /* Mobile toggle **************************************************/
 
 .m-menu-active {
-  transform: translateX(0%);
+  transform: scale(1);
+  transform-origin: top right;
   transition: 0.4s ease-in-out;
 }
 
@@ -207,33 +219,29 @@ nav li a:hover {
 /********************************************** MAIN *************************************************/
 
 main {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: stretch;
+  padding: 20px;
 
-div.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: auto;
-  margin-bottom: auto; */
-  height: 100%;
   /* overflow-y: auto; */
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   color: #c0c0c0;
-  box-shadow: 0px 0px 2px #000;
+  /* box-shadow: 0px 0px 2px #000; */
 }
 
 section {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  display: block;
+  /* margin-right: auto;
+  margin-left: auto; */
+  height: 100%;
+
+  flex-basis: 85%;
   /* text-shadow: 0px 0px 1px black; */
-  width: 80%;
+  /* width: 80%; */
 }
 
 div .text {
@@ -286,6 +294,7 @@ section img.left {
 
 section p {
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   text-align: justify;
   margin-bottom: 2em;
@@ -297,7 +306,7 @@ section p {
 }
 
 h1 {
-  margin: 0px 0px 30px 0px;
+  margin: 20px 0px 20px 0px;
   font-size: 28px;
 }
 
@@ -345,6 +354,145 @@ blockquote {
   font-style: italic;
   font-size: 1.5em;
   text-align: right;
+}
+
+@media screen and (max-width: 1080px) {
+  section {
+    width: 90%;
+  }
+
+  section img,
+  section img.center,
+  section img.right,
+  section img.left {
+    display: block;
+    margin: 20px auto;
+    float: none;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+  }
+
+  section img,
+  section img.center,
+  section img.right,
+  section img.left {
+    display: block;
+    margin: 20px auto;
+    float: none;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+/** FOOTER ***********************************************/
+
+footer {
+  /* position: relative; */
+  height: 30px;
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  /* min-height: 25px; */
+  background-color: #313131;
+  box-shadow: 0px 0px 2px black;
+  font-weight: 300;
+  font-size: 14px;
+  text-shadow: 0px 1px 8px #000;
+  color: #c0c0c0;
+  z-index: 1;
+}
+
+footer a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+footer a:hover {
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+/* PLACEHOLDER ********************************************/
+
+.placeholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder h1 {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.5em;
+  text-shadow: 0px 0px 8px skyblue;
+  text-transform: uppercase;
+}
+
+.card {
+  box-shadow: 0px 4px 10px 1px black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.card p {
+  margin: 30px auto 40px;
+  text-align: center;
+}
+
+.card h1 {
+  margin: 10px;
+}
+
+.card img {
+  height: auto;
+  width: 100%;
+  border: none;
+  margin: 0;
+  box-shadow: 0px 2px 5px black;
+}
+
+.title {
+  margin: 20px;
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  margin-top: 20px;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.card button:hover,
+.card a:hover {
+  opacity: 0.7;
 }
 
 /**** Animations **************************************************/
@@ -461,141 +609,4 @@ blockquote {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
-}
-
-@media screen and (max-width: 1080px) {
-  section {
-    width: 90%;
-  }
-
-  section img,
-  section img.center,
-  section img.right,
-  section img.left {
-    display: block;
-    margin: 20px auto;
-    float: none;
-    max-width: 400px;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  section {
-    width: 100%;
-  }
-
-  section img,
-  section img.center,
-  section img.right,
-  section img.left {
-    display: block;
-    margin: 20px auto;
-    float: none;
-    max-width: 400px;
-    height: auto;
-  }
-}
-
-/** FOOTER ***********************************************/
-
-footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  min-height: 25px;
-
-  background-color: #313131;
-  box-shadow: 0px 0px 3px black;
-  font-weight: 300;
-  font-size: 14px;
-  text-shadow: 0px 1px 5px #000;
-  color: #c0c0c0;
-  z-index: 5;
-}
-
-footer a {
-  color: #cfcfcf;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-footer a:hover {
-  color: #ffffff;
-  transition: 0.4s;
-}
-
-/* PLACEHOLDER ********************************************/
-
-.placeholder {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.placeholder h1 {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-weight: lighter;
-  letter-spacing: 0.5em;
-  text-shadow: 0px 0px 8px skyblue;
-  text-transform: uppercase;
-}
-
-.card {
-  box-shadow: 0px 4px 10px 1px black;
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
-
-.card p {
-  margin: 30px auto 40px;
-  text-align: center;
-}
-
-.card h1 {
-  margin: 10px;
-}
-
-.card img {
-  height: auto;
-  width: 100%;
-  border: none;
-  margin: 0;
-  box-shadow: 0px 2px 5px black;
-}
-
-.title {
-  margin: 20px;
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  margin-top: 20px;
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-.card button:hover,
-.card a:hover {
-  opacity: 0.7;
 }
