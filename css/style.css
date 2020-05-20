@@ -372,8 +372,6 @@ blockquote {
     display: block;
     margin: 20px auto;
     float: none;
-    max-width: 400px;
-    height: auto;
   }
 }
 
@@ -389,8 +387,6 @@ blockquote {
     display: block;
     margin: 20px auto;
     float: none;
-    max-width: 400px;
-    height: auto;
   }
 }
 
