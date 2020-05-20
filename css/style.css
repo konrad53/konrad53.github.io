@@ -388,8 +388,6 @@ blockquote {
     display: block;
     margin: 20px auto;
     float: none;
-    height: auto;
-    width: 400px;
   }
 }
 
