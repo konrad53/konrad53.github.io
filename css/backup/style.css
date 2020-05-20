@@ -30,10 +30,10 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 
   height: 100%;
-
+  background-attachment: fixed;
   background-image: url("/img/background2.svg");
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -538,27 +538,33 @@ button {
  */
 @-webkit-keyframes heartbeat {
   from {
+    -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-transform-origin: center center;
     transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   10% {
+    -webkit-transform: scale(0.91);
     transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   17% {
+    -webkit-transform: scale(0.98);
     transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   33% {
+    -webkit-transform: scale(0.87);
     transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   45% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
@@ -566,27 +572,33 @@ button {
 }
 @keyframes heartbeat {
   from {
+    -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-transform-origin: center center;
     transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   10% {
+    -webkit-transform: scale(0.91);
     transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   17% {
+    -webkit-transform: scale(0.98);
     transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   33% {
+    -webkit-transform: scale(0.87);
     transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   45% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
