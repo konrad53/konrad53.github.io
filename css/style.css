@@ -283,6 +283,7 @@ section img {
 
 section img.center {
   display: flex;
+  justify-self: center;
   margin: 30px auto;
 }
 
@@ -387,6 +388,8 @@ blockquote {
     display: block;
     margin: 20px auto;
     float: none;
+    height: auto;
+    width: 400px;
   }
 }
 
