@@ -239,8 +239,7 @@ main {
 
 section {
   display: block;
-  /* margin-right: auto;
-  margin-left: auto; */
+
   height: 100%;
 
   flex-basis: 85%;
@@ -363,22 +362,13 @@ blockquote {
 
 @media screen and (max-width: 1080px) {
   section {
-    width: 90%;
-  }
-
-  section img,
-  section img.center,
-  section img.right,
-  section img.left {
-    display: block;
-    margin: 20px auto;
-    float: none;
+    flex-basis: 90%;
   }
 }
 
 @media screen and (max-width: 768px) {
   section {
-    width: 100%;
+    flex-basis: 100%;
   }
 
   section img,
@@ -388,6 +378,8 @@ blockquote {
     display: block;
     margin: 20px auto;
     float: none;
+    width: 90vw;
+    height: auto;
   }
 }
 
