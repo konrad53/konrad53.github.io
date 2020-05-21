@@ -30,11 +30,11 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 
   height: 100%;
-  background-attachment: fixed;
-  background-image: url("/img/background.svg");
+  /* background-attachment: fixed;
+  background-image: url("/img/background2.svg");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .container {
@@ -42,6 +42,21 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.container::before {
+  background-image: url("/img/background.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
 }
 
 .content {
