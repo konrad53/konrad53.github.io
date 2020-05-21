@@ -406,13 +406,13 @@ blockquote {
 /** FOOTER ***********************************************/
 
 footer {
-  /* position: relative; */
+  position: sticky;
+  position: -webkit-sticky;
   height: 30px;
   display: flex;
   /* width: 100%; */
   align-items: center;
   justify-content: center;
-  margin-bottom: auto;
 
   padding: 10px;
   /* min-height: 25px; */
