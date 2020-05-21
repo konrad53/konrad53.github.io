@@ -18,27 +18,32 @@
   flex-basis: 100%;
   width: 100%;
   list-style: none;
+  font-size: 18px;
 }
 
 .topic-list-item {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  height: 60px;
+  align-items: flex-end;
+  height: 3em;
 }
 
 .topic-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   height: 100%;
-  width: 100%;
-  padding: 5px 5px 5px 15px;
-  font-size: 18px;
+  /* width: 100%; */
+  padding: 0em 0em 0em 0.5em;
   font-family: "Roboto Condensed", sans-serif;
   text-decoration: none;
+  /* text-align: center; */
   color: #c0c0c0;
   border-bottom: 1px solid #7a7a7a;
 }
 
 .topic-title:hover {
   color: #ffffff;
+  border-bottom: 1px solid #fff;
   transition: 0.4s ease;
 }
