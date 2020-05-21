@@ -25,7 +25,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-html,
+html {
+  height: 100%;
+}
 body {
   font-family: "Roboto Condensed", sans-serif;
 
@@ -39,7 +41,7 @@ body {
 
 .container {
   /* height: 100%; */
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -60,9 +62,7 @@ body {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1;
 }
 
 /* ? NAVBAR ********************************************************/
@@ -258,7 +258,7 @@ main.blog-bg {
 }
 
 section {
-  display: block;
+  /* display: block; */
 
   height: 100%;
 
@@ -442,6 +442,7 @@ footer a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 80vh;
 }
 
 .placeholder h1 {
@@ -459,16 +460,18 @@ footer a:hover {
   max-width: 300px;
   margin: auto;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: rgb(206, 203, 203);
 }
 
 .card p {
   margin: 30px auto 40px;
   text-align: center;
+  color: #313131;
 }
 
 .card h1 {
   margin: 10px;
+  color: #313131;
 }
 
 .card img {
@@ -481,7 +484,7 @@ footer a:hover {
 
 .title {
   margin: 20px;
-  color: grey;
+  color: rgb(68, 68, 68);
   font-size: 18px;
 }
 
