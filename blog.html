@@ -42,48 +42,70 @@
         </nav>
         <main class="content">
 
-            <section class="text-blur-out"">
+            <section class="text-blur-out bg-section">
 
                 <div class=" row" style="height: 100%;">
-                <div class="double-column">k</div>
-                <div class="column">
-                    <div class="topics-container">
-                        <!-- <input type="text" placeholder="Search.."> -->
+                    <div class="double-column">
+                        <div class="post">
 
-                        <ul class="topic-list">
-                            <li class="topic-list-item"><a href="" class="topic-title">Corporis fuga consequuntur
-                                    vel ea optio voluptatum nisi.</a></li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Iure id itaque non et.</a>
-                            </li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Alias dolores voluptas
-                                    amet.</a></li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Corporis quam rerum ipsum
-                                    commodi tenetur sequi dolore.</a>
-                            </li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Corporis fuga consequuntur
-                                    vel ea optio voluptatum nisi.</a></li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Iure id itaque non et.</a>
-                            </li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Alias dolores voluptas
-                                    amet.</a></li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Corporis quam rerum ipsum
-                                    commodi tenetur sequi dolore.</a>
-                            </li>
+                            <h1 class="glow">Title</h1>
 
-                            <li class="topic-list-item"><a href="" class="topic-title">Corporis fuga consequuntur
-                                    vel ea optio voluptatum nisi.</a></li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Iure id itaque non et.</a>
-                            </li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Alias dolores voluptas
-                                    amet.</a></li>
-                            <li class="topic-list-item"><a href="" class="topic-title">Corporis quam rerum ipsum
-                                    commodi tenetur sequi dolore.</a>
-                            </li>
+                            <p>Consectetur magnam nesciunt voluptate voluptatem molestias qui animi. Nulla ut
+                                doloremque.
+                                Illo
+                                enim placeat aliquid.
+
+                                Nostrum neque qui vero blanditiis. Est deserunt blanditiis unde harum qui vero. Possimus
+                                cupiditate repellendus eum ab sint qui. Debitis repudiandae fuga commodi laboriosam at
+                                voluptas.
+
+                                Et corporis quasi voluptatem. Suscipit accusantium dignissimos dicta quas eligendi.
+                                Distinctio
+                                id vitae. Voluptatem animi et quo sit. Quam et velit enim architecto.</p>
 
 
-                        </ul>
+
+                        </div>
                     </div>
-                </div>
+                    <div class="column">
+                        <div class="topics-container">
+                            <input type="text" id="bgSearch" onkeyup="bgSearch()" placeholder="Search">
+
+
+                            <ul id="bgList" class="topic-list">
+                                <li class="topic-list-item"><a href="" class="topic-title">Corporis fuga consequuntur
+                                        vel ea optio voluptatum nisi.</a></li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Iure id itaque non et.</a>
+                                </li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Alias dolores voluptas
+                                        amet.</a></li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Corporis quam rerum ipsum
+                                        commodi tenetur sequi dolore.</a>
+                                </li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Corporis fuga consequuntur
+                                        vel ea optio voluptatum nisi.</a></li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Iure id itaque non et.</a>
+                                </li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Alias dolores voluptas
+                                        amet.</a></li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Corporis quam rerum ipsum
+                                        commodi tenetur sequi dolore.</a>
+                                </li>
+
+                                <li class="topic-list-item"><a href="" class="topic-title">Corporis fuga consequuntur
+                                        vel ea optio voluptatum nisi.</a></li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Iure id itaque non et.</a>
+                                </li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Alias dolores voluptas
+                                        amet.</a></li>
+                                <li class="topic-list-item"><a href="" class="topic-title">Corporis quam rerum ipsum
+                                        commodi tenetur sequi dolore.</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
 
 
 
@@ -100,6 +122,27 @@
         </footer>
 
     </div>
+    <script>
+        function bgSearch() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('bgSearch');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("bgList");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
     <script src="/js/slide.js"></script>
     <!-- <script src="/js/navbar.js"></script> -->
