@@ -45,7 +45,7 @@ body {
 }
 
 .container::before {
-  background-image: url("/img/background.svg");
+  background-image: url("/img/background2.svg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
