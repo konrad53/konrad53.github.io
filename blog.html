@@ -18,6 +18,13 @@
 
 </head>
 
+<script>
+    document.getElementById("hide-button").addEventListener('click', hideClick());
+
+
+
+</script>
+
 <body>
 
 
@@ -73,10 +80,10 @@
 
                         </div>
                     </div>
-                    <div class="column">
+                    <div id="list-column" class="column">
                         <div class="topics-container">
                             <input type="text" id="bgSearch" onkeyup="bgSearch()" placeholder="Search">
-                            <button class="hide-button">Hide</button>
+
 
 
                             <ul id="bgList" class="topic-list">
@@ -114,15 +121,20 @@
                         </div>
                     </div>
 
+                </div>
+
 
 
 
             </section>
+            <div id="hide-button" class="hide-button-off" onclick="hideClick()"><img id="arrow" src="img/arrow.svg">
+            </div>
+
 
 
         </main>
         <footer>
-            <p>©2020 <a href="mailto:konrad53@gmail.com">Konrad Górniak</a>.
+            <p>©2020 <a href=" mailto:konrad53@gmail.com">Konrad Górniak</a>.
                 All rights reserved.
             </p>
 
@@ -149,6 +161,40 @@
                 }
             }
         }
+
+        function hideClick() {
+            var btn = document.getElementById("hide-button");
+            var img = document.getElementById("arrow");
+            var list = document.getElementById("list-column");
+
+
+
+            if (btn.className == "hide-button-off") {
+                list.classList.add("column-hide");
+                btn.className = "hide-button-on";
+
+            }
+            else {
+                list.classList.remove("column-hide");
+
+                btn.className = "hide-button-off";
+            }
+
+        }
+
+
+
+        // function showClick() {
+        //     document.getElementById("list-column").classList.remove("column-hide");
+        //     document.getElementById("hide-button").innerText = "Hide";
+        //     document.getElementById("hide-button").classList.remove("hide-button-active");
+
+
+        // }
+
+
+
+
     </script>
 
     <script src="/js/slide.js"></script>

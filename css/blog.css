@@ -1,4 +1,7 @@
 /* BLOG */
+body {
+  overflow-x: hidden;
+}
 
 .bg-section {
   flex-basis: 95%;
@@ -18,27 +21,39 @@
   cursor: pointer; /* Add a pointer on hover */
 }
 
-.hide-button {
+#hide-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   background-color: transparent;
   color: #c0c0c0;
   font-family: "Roboto", sans-serif;
   border: 0;
   margin: 0;
-  width: 50px;
-  height: 30px;
-  top: 2px;
-  right: -5px;
+  width: 20px;
+  height: 100px;
+  top: 45%;
+  right: 1vw;
   z-index: 99;
   cursor: pointer;
 }
 
-.hide-button:hover {
+#arrow:hover {
+  filter: brightness(1);
+}
+
+#hide-button:hover {
   color: white;
   transition: 0.4s ease-in-out;
 }
 
 /* INSIDE "section" */
+
+.column-hide {
+  transform: translateX(120%);
+  transition: 0.4s;
+}
 
 .topics-container {
   display: flex;
@@ -87,7 +102,7 @@
 }
 
 #bgSearch {
-  width: 90%;
+  width: 85%;
   background-image: url("/img/searchicon.svg");
   background-color: #8383839f;
   background-repeat: no-repeat;
@@ -101,6 +116,12 @@
   border-left: 0px;
 
   transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #9c9c9c;
+  opacity: 1; /* Firefox */
 }
 
 #bgSearch:hover {
