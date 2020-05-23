@@ -194,7 +194,7 @@ h4 {
   text-align: right;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   #list-column {
     display: none;
   }
