@@ -331,7 +331,7 @@ h1 {
 }
 
 h1::first-letter {
-  color: slateblue;
+  color: #789eff;
   font-size: 1.5em;
 }
 
