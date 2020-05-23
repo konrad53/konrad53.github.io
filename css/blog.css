@@ -33,7 +33,7 @@ body {
   margin: 0;
   width: 50px;
   height: 200px;
-  top: 40%;
+  top: 40vh;
   right: 0vw;
   z-index: 99;
   cursor: pointer;
