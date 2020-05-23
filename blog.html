@@ -172,12 +172,32 @@
             if (btn.className == "hide-button-off") {
                 list.classList.add("column-hide");
                 btn.className = "hide-button-on";
+                list.classList.remove("column-show");
+                // list.style.flex = "0";
+                setTimeout(function () {
+
+                    list.style.maxWidth = "0";
+
+                }, 300);
+
+
 
             }
             else {
-                list.classList.remove("column-hide");
 
-                btn.className = "hide-button-off";
+                // list.style.flex = "2";
+                setTimeout(function () {
+                    list.classList.add("column-show");
+                    list.classList.remove("column-hide");
+                    btn.className = "hide-button-off";
+
+                }, 300);
+
+
+                list.style.maxWidth = "100%";
+
+
+
             }
 
         }

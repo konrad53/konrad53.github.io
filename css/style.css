@@ -275,14 +275,14 @@ div .text {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
+  flex: 2;
 }
 
 .double-column {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 2;
+  flex: 5;
 }
 
 section img {

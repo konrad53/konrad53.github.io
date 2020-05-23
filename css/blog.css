@@ -51,8 +51,16 @@ body {
 /* INSIDE "section" */
 
 .column-hide {
-  transform: translateX(120%);
-  transition: 0.4s;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.column-show {
+  transform: translateX(0%);
+  opacity: 1;
+  /* max-height: 1000px; */
+  transition: 0.5s;
 }
 
 .topics-container {
