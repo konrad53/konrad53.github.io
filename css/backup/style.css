@@ -25,36 +25,44 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-html,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto Condensed", sans-serif;
-
-  height: 100%;
-  background-attachment: fixed;
-  background-image: url("/img/background2.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* height: 100%; */
 }
 
 .container {
-  height: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 
+.container::before {
+  background-image: url("/img/background2.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+  z-index: -1;
+}
+
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1;
 }
 
 /* ? NAVBAR ********************************************************/
 
 nav {
   /* min-height: 40px; */
-  height: 7vh;
+  height: 6vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -63,7 +71,7 @@ nav {
   top: 0px;
 
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
 
   background-color: #313131;
 
@@ -75,18 +83,18 @@ nav {
 /* LOGO ******************************************************/
 
 .shadow {
-  -webkit-filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 0px 3px rgb(0, 0, 0));
+  filter: drop-shadow(0px 0px 3px rgb(0, 0, 0));
   /* Similar syntax to box-shadow */
 }
 
 .logo {
-  max-height: 70px;
+  max-height: 60px;
   min-height: 40px;
 
   /* width: 100%; */
   height: 100%;
-  padding: 8px;
+  padding: 4px;
 }
 
 .logo:hover {
@@ -133,27 +141,32 @@ nav li a {
 nav li a.active-gold {
   color: gold;
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a.active-blue {
-  color: skyblue;
+  color: #789eff;
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a.active-red {
-  color: #ff4136;
+  color: rgb(255, 123, 0);
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a.active-green {
   color: limegreen;
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a:hover {
   color: white;
   letter-spacing: 0.3em;
   transition: 0.4s ease-in;
+  font-weight: 500;
 }
 
 .m-menu {
@@ -185,7 +198,7 @@ nav li a:hover {
     position: absolute;
     right: 0px;
     height: 50%;
-    width: 50%;
+    width: 80%;
     top: 40px;
     background-color: inherit;
     display: flex;
@@ -194,6 +207,10 @@ nav li a:hover {
     transform-origin: top right;
     transform: scale(0);
     transition: transform 0.4s ease-in-out;
+  }
+
+  nav li {
+    height: 100%;
   }
 }
 
@@ -223,22 +240,27 @@ nav li a:hover {
 /********************************************** MAIN *************************************************/
 
 main {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  /* align-items: stretch; */
   padding: 20px;
+  min-height: 91vh;
 
   /* overflow-y: auto; */
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
   color: #c0c0c0;
   /* box-shadow: 0px 0px 2px #000; */
 }
 
+main.blog-bg {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
 section {
-  display: block;
+  /* display: block; */
 
   height: 100%;
 
@@ -262,14 +284,14 @@ div .text {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
+  flex: 2;
 }
 
 .double-column {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 2;
+  flex: 5;
 }
 
 section img {
@@ -299,9 +321,11 @@ section img.left {
 section p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   margin-bottom: 2em;
+  letter-spacing: 1px;
+  line-height: 1.3em;
 }
 
 .initial::first-letter {
@@ -312,40 +336,43 @@ section p {
 h1 {
   margin: 20px 0px 20px 0px;
   font-size: 28px;
+  letter-spacing: 0.4em;
 }
 
 h1::first-letter {
-  color: slateblue;
+  color: #789eff;
   font-size: 1.5em;
 }
 
 h2 {
   margin: 20px 0px 20px 0px;
-  font-size: 20px;
+  letter-spacing: 0.3em;
+  font-size: 22px;
 }
 
 h3 {
   margin: 10px 0px 10px 0px;
-  font-size: 16px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
 }
 
 .glow {
   font-weight: lighter;
-  letter-spacing: 0.4em;
+
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
 
 .glow2 {
   font-weight: lighter;
-  letter-spacing: 0.2em;
+
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
 
 .glow3 {
   font-weight: lighter;
-  letter-spacing: 0.2em;
+
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
@@ -371,6 +398,10 @@ blockquote {
     flex-basis: 100%;
   }
 
+  section p {
+    font-size: 16px;
+  }
+
   section img,
   section img.center,
   section img.right,
@@ -386,13 +417,13 @@ blockquote {
 /** FOOTER ***********************************************/
 
 footer {
-  /* position: relative; */
-  height: 30px;
+  height: 3vh;
+  min-height: 30px;
   display: flex;
   /* width: 100%; */
   align-items: center;
   justify-content: center;
-  margin-bottom: auto;
+  letter-spacing: 1px;
 
   padding: 10px;
   /* min-height: 25px; */
@@ -407,6 +438,7 @@ footer {
 
 footer a {
   color: #cfcfcf;
+  margin: 0px 2px;
   text-decoration: none;
   transition: 0.4s;
 }
@@ -423,6 +455,7 @@ footer a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 80vh;
 }
 
 .placeholder h1 {
@@ -436,9 +469,12 @@ footer a:hover {
 
 .card {
   box-shadow: 0px 4px 10px 1px black;
+  border-radius: 1%;
   max-width: 300px;
+  min-width: 300px;
   margin: auto;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .card p {
@@ -460,11 +496,11 @@ footer a:hover {
 
 .title {
   margin: 20px;
-  color: grey;
+  color: rgb(150, 150, 150);
   font-size: 18px;
 }
 
-button {
+.card button {
   margin-top: 20px;
   border: none;
   outline: 0;
@@ -476,6 +512,7 @@ button {
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  border-radius: 2%;
 }
 
 .card a {
@@ -538,33 +575,27 @@ button {
  */
 @-webkit-keyframes heartbeat {
   from {
-    -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-transform-origin: center center;
     transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   10% {
-    -webkit-transform: scale(0.91);
     transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   17% {
-    -webkit-transform: scale(0.98);
     transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   33% {
-    -webkit-transform: scale(0.87);
     transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   45% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
@@ -572,33 +603,27 @@ button {
 }
 @keyframes heartbeat {
   from {
-    -webkit-transform: scale(1);
     transform: scale(1);
-    -webkit-transform-origin: center center;
     transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   10% {
-    -webkit-transform: scale(0.91);
     transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   17% {
-    -webkit-transform: scale(0.98);
     transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   33% {
-    -webkit-transform: scale(0.87);
     transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   45% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
