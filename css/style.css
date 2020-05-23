@@ -31,11 +31,10 @@ html {
 }
 body {
   font-family: "Roboto Condensed", sans-serif;
+  /* height: 100%; */
 }
 
 .container {
-  /* height: 100%; */
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +62,7 @@ body {
 
 nav {
   /* min-height: 40px; */
-  height: 7vh;
+  height: 6vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -232,11 +231,11 @@ nav li a:hover {
 /********************************************** MAIN *************************************************/
 
 main {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  /* align-items: stretch; */
   padding: 20px;
+  min-height: 91vh;
 
   /* overflow-y: auto; */
   background-color: rgba(0, 0, 0, 0.5);
@@ -405,7 +404,8 @@ blockquote {
 /** FOOTER ***********************************************/
 
 footer {
-  height: 30px;
+  height: 3vh;
+  min-height: 30px;
   display: flex;
   /* width: 100%; */
   align-items: center;
