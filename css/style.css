@@ -141,27 +141,32 @@ nav li a {
 nav li a.active-gold {
   color: gold;
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a.active-blue {
   color: #789eff;
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a.active-red {
   color: rgb(255, 123, 0);
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a.active-green {
   color: limegreen;
   letter-spacing: 0.3em;
+  font-weight: 500;
 }
 
 nav li a:hover {
   color: white;
   letter-spacing: 0.3em;
   transition: 0.4s ease-in;
+  font-weight: 500;
 }
 
 .m-menu {
