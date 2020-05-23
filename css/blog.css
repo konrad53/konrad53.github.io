@@ -99,6 +99,7 @@ nav {
   flex-basis: 100%;
   padding: 0px;
   margin-bottom: 2em;
+  margin-left: 2em;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -181,7 +182,7 @@ nav {
 .post {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 2em;
-  margin-right: 1em;
+  /* margin-right: 1em; */
   margin-bottom: 2em;
 }
 
@@ -191,4 +192,21 @@ h4 {
   font-style: italic;
   margin: 10px;
   text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+  #list-column {
+    display: none;
+  }
+
+  .bg-section {
+    flex-basis: 100%;
+  }
+  .post {
+    padding: 1em;
+  }
+
+  #hide-button {
+    display: none;
+  }
 }
