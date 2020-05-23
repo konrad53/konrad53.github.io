@@ -212,6 +212,7 @@ h4 {
 
   #totop {
     justify-content: flex-end;
-    padding-right: 2px;
+    font-size: 14px;
+    width: 40px;
   }
 }
