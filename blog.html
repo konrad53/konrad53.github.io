@@ -80,7 +80,7 @@
 
                         </div>
                     </div>
-                    <div id="list-column" class="column">
+                    <div id="list-column" class="column column-show">
                         <div class="topics-container">
                             <input type="text" id="bgSearch" onkeyup="bgSearch()" placeholder="Search">
 
@@ -127,7 +127,14 @@
 
 
             </section>
-            <div id="hide-button" class="hide-button-off" onclick="hideClick()"><img id="arrow" src="img/arrow.svg">
+            <div id="hide-button" class="hide-button-off" onclick="hideClick()">
+                <svg id="arrow" width="10" height="40" viewBox="0 0 10 40" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect id="svg-down" width="3" height="22.0051" rx="1.06859"
+                        transform="matrix(-0.946604 -0.322399 0.362504 -0.931982 2.02304 40)" fill="#D8D8D8" />
+                    <rect id="svg-up" width="3" height="22.0051" rx="1.06859"
+                        transform="matrix(-0.946604 0.322399 -0.362504 -0.931982 9.99997 20.5083)" fill="#D8D8D8" />
+                </svg>
             </div>
 
 
@@ -164,21 +171,28 @@
 
         function hideClick() {
             var btn = document.getElementById("hide-button");
-            var img = document.getElementById("arrow");
+            var up = document.getElementById("svg-up");
+            var down = document.getElementById("svg-down");
             var list = document.getElementById("list-column");
+            var arr = document.getElementById("arrow");
+
 
 
 
             if (btn.className == "hide-button-off") {
                 list.classList.add("column-hide");
-                btn.className = "hide-button-on";
+
                 list.classList.remove("column-show");
+                btn.className = "hide-button-on";
                 // list.style.flex = "0";
                 setTimeout(function () {
 
                     list.style.maxWidth = "0";
 
                 }, 300);
+
+                down.setAttribute('transform', 'matrix(0.946604 -0.322399 0.362505 0.931982 0 19.4917)');
+                up.setAttribute('transform', 'matrix(0.946604 0.322399 -0.362505 0.931982 7.97693 1.52588e-05)');
 
 
 
@@ -195,6 +209,8 @@
 
 
                 list.style.maxWidth = "100%";
+                down.setAttribute('transform', 'matrix(-0.946604 -0.322399 0.362504 -0.931982 2.02304 40)');
+                up.setAttribute('transform', 'matrix(-0.946604 0.322399 -0.362504 -0.931982 9.99997 20.5083)');
 
 
 

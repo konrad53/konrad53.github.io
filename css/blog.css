@@ -51,16 +51,17 @@ body {
 /* INSIDE "section" */
 
 .column-hide {
-  transform: translateX(100%);
+  transform: translateX(100%) scaleX(0);
+  transform-origin: right;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .column-show {
-  transform: translateX(0%);
+  transform: translateX(0%) scaleX(1);
   opacity: 1;
   /* max-height: 1000px; */
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .topics-container {
