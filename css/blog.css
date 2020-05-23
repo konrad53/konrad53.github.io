@@ -175,9 +175,9 @@ nav {
   transition: 0.3s;
 }
 
-.post-column {
-  /* padding-right: 1em; */
-}
+/* .post-column {
+  padding-right: 1em;
+} */
 
 .post {
   background-color: rgba(0, 0, 0, 0.2);
