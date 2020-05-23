@@ -144,12 +144,12 @@ nav li a.active-gold {
 }
 
 nav li a.active-blue {
-  color: skyblue;
+  color: #789eff;
   letter-spacing: 0.3em;
 }
 
 nav li a.active-red {
-  color: #ff4136;
+  color: rgb(255, 123, 0);
   letter-spacing: 0.3em;
 }
 
