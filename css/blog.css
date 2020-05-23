@@ -209,4 +209,8 @@ h4 {
   #hide-button {
     display: none;
   }
+
+  #totop {
+    top: 60%;
+  }
 }
