@@ -27,6 +27,7 @@
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Roboto Condensed", sans-serif;
@@ -71,7 +72,7 @@ nav {
   top: 0px;
 
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
 
   background-color: #313131;
 
@@ -312,9 +313,11 @@ section img.left {
 section p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   margin-bottom: 2em;
+  letter-spacing: 1px;
+  line-height: 1.3em;
 }
 
 .initial::first-letter {
@@ -325,6 +328,7 @@ section p {
 h1 {
   margin: 20px 0px 20px 0px;
   font-size: 28px;
+  letter-spacing: 0.4em;
 }
 
 h1::first-letter {
@@ -334,31 +338,33 @@ h1::first-letter {
 
 h2 {
   margin: 20px 0px 20px 0px;
-  font-size: 20px;
+  letter-spacing: 0.3em;
+  font-size: 22px;
 }
 
 h3 {
   margin: 10px 0px 10px 0px;
-  font-size: 16px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
 }
 
 .glow {
   font-weight: lighter;
-  letter-spacing: 0.4em;
+
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
 
 .glow2 {
   font-weight: lighter;
-  letter-spacing: 0.2em;
+
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
 
 .glow3 {
   font-weight: lighter;
-  letter-spacing: 0.2em;
+
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
@@ -404,13 +410,14 @@ footer {
   /* width: 100%; */
   align-items: center;
   justify-content: center;
+  letter-spacing: 1px;
 
   padding: 10px;
   /* min-height: 25px; */
   background-color: #313131;
   box-shadow: 0px 0px 2px black;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   text-shadow: 0px 1px 8px #000;
   color: #c0c0c0;
   z-index: 1;
