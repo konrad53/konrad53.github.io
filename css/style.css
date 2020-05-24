@@ -642,11 +642,12 @@ footer a:hover {
   nav {
     justify-content: space-between;
     padding: 0px 20px;
-    position: static;
+    height: 45px;
+    /* position: static; */
   }
 
   nav ul {
-    position: absolute;
+    position: fixed;
     right: 0px;
     height: 50%;
     width: 80%;
