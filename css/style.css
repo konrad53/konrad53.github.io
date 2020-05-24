@@ -80,7 +80,7 @@ nav {
 
   background-color: #313131;
 
-  box-shadow: 0px 0px 2px black;
+  /* box-shadow: 0px 0px 2px black; */
 
   z-index: 5;
 }
@@ -507,7 +507,7 @@ footer {
   padding: 10px;
   /* min-height: 25px; */
   background-color: #313131;
-  box-shadow: 0px 0px 2px black;
+  /* box-shadow: 0px 0px 2px black; */
   font-weight: 300;
   font-size: 14px;
   /* text-shadow: 0px 1px 8px #000; */
