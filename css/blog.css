@@ -239,6 +239,12 @@ nav {
   transition: 0.4s;
 }
 
+.post-title {
+  background-image: url("/img/pic.jpg");
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
 .post h4 {
   font-size: 1em;
   font-weight: 300;
