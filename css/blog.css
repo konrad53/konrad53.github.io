@@ -214,12 +214,9 @@ nav {
 .post {
   /* background-color: rgba(0, 0, 0, 0.2); */
   padding: 3em;
+  padding-top: 0;
   /* margin-right: 1em; */
   margin-bottom: 3em;
-}
-
-.post h1 {
-  margin: 20px 0px 40px 0px;
 }
 
 /* .post:hover {
@@ -240,17 +237,44 @@ nav {
 }
 
 .post-title {
-  background-image: url("/img/pic.jpg");
-  background-repeat: no-repeat;
-  height: 300px;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-image: url("/img/pic.jpg"); */
+  background-size: cover;
+}
+
+.post-title .title {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin: 0;
+  padding: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.post-title .data {
+  font-size: 1em;
+  font-weight: 300;
+  font-style: italic;
+  position: absolute;
+  height: 40px;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #a1a1a1;
 }
 
 .post h4 {
+  align-self: end;
+  justify-self: flex-start;
   font-size: 1em;
   font-weight: 300;
   font-style: italic;
   margin: 0px;
-  text-align: right;
   color: #a1a1a1;
 }
 
