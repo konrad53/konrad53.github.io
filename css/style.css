@@ -255,6 +255,7 @@ main {
 
   /* overflow-y: auto; */
   background-color: rgba(0, 0, 0, 0.5);
+
   /* backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px); */
   color: #dfdfdf;
@@ -346,7 +347,8 @@ section p {
 }
 
 section.background {
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  /* background-color: #313131b6; */
 }
 
 .initial::first-letter {
@@ -588,7 +590,7 @@ footer a:hover {
 
 @media screen and (max-width: 1080px) {
   .container::before {
-    background-position: top right;
+    background-position: center;
   }
 
   section {
@@ -643,7 +645,7 @@ footer a:hover {
     justify-content: space-between;
     padding: 0px 20px;
     height: 45px;
-    background-color: rgba(0, 0, 0, 0.85);
+    /* background-color: rgba(0, 0, 0, 0.85); */
 
     /* position: sticky; */
   }
