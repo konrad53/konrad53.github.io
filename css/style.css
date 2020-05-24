@@ -337,7 +337,7 @@ section {
 section img {
   height: 400px;
   width: auto;
-  box-shadow: 0px 0px 8px 1px black;
+  box-shadow: 0px 0px 6px 0px black;
   border-radius: 0;
   margin: 30px;
 }
@@ -526,7 +526,7 @@ footer a:hover {
   margin: auto;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 1px;
+  padding: 5px;
 }
 
 .card p {
@@ -543,7 +543,7 @@ footer a:hover {
   width: 100%;
   border: none;
   margin: 0px;
-  box-shadow: 0px 2px 5px black;
+  /* box-shadow: 0px 2px 5px black; */
 }
 
 .title {
