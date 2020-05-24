@@ -196,6 +196,10 @@ nav {
   margin-bottom: 3em;
 }
 
+.post h1 {
+  margin: 20px 0px 40px 0px;
+}
+
 /* .post:hover {
   
   transition: 0.4s;
