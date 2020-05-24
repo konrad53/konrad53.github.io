@@ -432,6 +432,7 @@ blockquote {
   font-size: 1.3em;
   text-align: right;
   font-weight: lighter;
+  color: #a1a1a1;
 }
 
 @media screen and (max-width: 1080px) {
