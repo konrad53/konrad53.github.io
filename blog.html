@@ -52,6 +52,27 @@
         </nav>
         <main class="content">
 
+            <div id="overlay" onclick="OverlayOff()">
+                <h3 style="text-align: center; color: skyblue; text-transform: uppercase; margin: 20px 0px;">
+                    Topics
+                </h3>
+                <!-- <input type="text" id="bgSearch" onkeyup="bgSearch()" placeholder="Search"> -->
+                <ul id="bgList" class="topic-list">
+                    <li class="topic-list-item"><a href="#title1" class="topic-title">Quibusdam nobis
+                            mollitia qui pariatur.</a></li>
+                    <li class="topic-list-item"><a href="#title2" class="topic-title">Sunt amet dolorum
+                            consequatur dolor quos maiores reiciendis.</a>
+                    </li>
+                    <li class="topic-list-item"><a href="#title3" class="topic-title">Ut doloribus esse
+                            repudiandae facilis sed.</a></li>
+                    <li class="topic-list-item"><a href="#title4" class="topic-title">Velit eaque
+                            delectus
+                            praesentium architecto dolor cupiditate.</a>
+                    </li>
+                    <li class="topic-list-item"><a href="#title5" class="topic-title">Qui amet et.</a>
+                    </li>
+            </div>
+
 
 
             <section class="text-blur-out no-padding">
@@ -327,10 +348,12 @@
                         transform="matrix(-0.946604 0.322399 -0.362504 -0.931982 9.99997 20.5083)" fill="#D8D8D8" />
                 </svg>
             </div>
-
+            <div id="overlay-btn" onclick="OverlayOn()">
+            </div>
             <a id="totop" href="#navbar">
                 TOP
             </a>
+
 
 
 
@@ -411,7 +434,13 @@
 
         }
 
+        function OverlayOn() {
+            document.getElementById("overlay").style.display = "block";
+        }
 
+        function OverlayOff() {
+            document.getElementById("overlay").style.display = "none";
+        }
 
 
 

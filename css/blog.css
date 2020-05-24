@@ -13,16 +13,38 @@ nav {
 
 #overlay {
   position: fixed; /* Sit on top of the page content */
-  display: block; /* Hidden by default */
-  width: 50%; /* Full width (cover the whole page) */
-  height: 50%; /* Full height (cover the whole page) */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+  z-index: 20; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  position: fixed;
+  width: 35px;
+  height: 50px;
+  top: 75%;
+  right: 0vw;
+  color: #c0c0c0;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url("/img/searchicon.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  z-index: 99;
+  cursor: pointer;
 }
 
 #totop {
@@ -238,28 +260,6 @@ nav {
   padding-top: 10px;
 }
 
-@media screen and (max-width: 1080px) {
-  #list-column {
-    display: none;
-  }
-
-  .bg-section {
-    flex-basis: 100%;
-  }
-  .post {
-    padding: 1em;
-  }
-
-  #hide-button {
-    display: none;
-  }
-
-  #totop {
-    font-size: 12px;
-    width: 35px;
-  }
-}
-
 /* Pagination links */
 .pagination {
   margin: auto;
@@ -283,6 +283,32 @@ nav {
 /* Add a grey background color on mouse-over */
 .pagination a:hover:not(.active) {
   background-color: rgb(100, 100, 100);
+}
+
+@media screen and (max-width: 1080px) {
+  #list-column {
+    display: none;
+  }
+
+  .bg-section {
+    flex-basis: 100%;
+  }
+  .post {
+    padding: 1em;
+  }
+
+  #hide-button {
+    display: none;
+  }
+
+  #totop {
+    font-size: 12px;
+    width: 35px;
+  }
+
+  #overlay-btn {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1280px) {
