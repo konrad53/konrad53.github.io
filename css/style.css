@@ -42,7 +42,7 @@ body {
 .container::before {
   background-image: url("/img/background2.svg");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top left;
   background-size: auto;
   content: "";
   height: 100%;
@@ -219,37 +219,6 @@ nav li a:hover {
   margin: 5px;
   /* box-shadow: 0px 1px 8px black; */
   transition: 0.3s;
-}
-
-@media screen and (max-width: 768px) {
-  .m-menu {
-    display: block;
-  }
-
-  nav {
-    justify-content: space-between;
-    padding: 0px 20px;
-    position: static;
-  }
-
-  nav ul {
-    position: absolute;
-    right: 0px;
-    height: 50%;
-    width: 80%;
-    top: 40px;
-    background-color: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    transform-origin: top right;
-    transform: scale(0);
-    transition: transform 0.4s ease-in-out;
-  }
-
-  nav li {
-    height: 100%;
-  }
 }
 
 /* Mobile toggle **************************************************/
@@ -437,63 +406,8 @@ blockquote {
   font-weight: lighter;
   color: #a1a1a1;
 }
-@media screen and (max-width: 1680px) {
-  section {
-    flex-basis: 85%;
-  }
-  .text {
-    padding-left: 8em !important;
-    padding-right: 8em !important;
-  }
-}
 
-@media screen and (max-width: 1480px) {
-  section {
-    flex-basis: 85%;
-  }
-  .text {
-    padding-left: 5em !important;
-    padding-right: 5em !important;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  section {
-    flex-basis: 95%;
-  }
-  .text {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    padding: 0;
-  }
-  section {
-    flex-basis: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  section p {
-    font-size: 15px;
-  }
-
-  section img,
-  section img.center,
-  section img.right,
-  section img.left {
-    display: block;
-    margin: 20px auto;
-    float: none;
-    width: 90vw;
-    height: auto;
-  }
-}
-
-/** FOOTER ***********************************************/
+/** FOOTER *****************************************************************************************/
 
 footer {
   height: 3vh;
@@ -527,7 +441,7 @@ footer a:hover {
   transition: 0.4s;
 }
 
-/* PLACEHOLDER ********************************************/
+/* PLACEHOLDER **************************************************************************************/
 
 .placeholder {
   display: flex;
@@ -546,7 +460,7 @@ footer a:hover {
   text-transform: uppercase;
 }
 
-/**** Animations **************************************************/
+/**** Animations **************************************************************************************/
 
 .text-blur-out {
   -webkit-animation: text-blur-out 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53)
@@ -647,5 +561,106 @@ footer a:hover {
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+  }
+}
+
+/* MEDIA  ******************************************************************************************/
+
+@media screen and (max-width: 1680px) {
+  section {
+    flex-basis: 85%;
+  }
+  .text {
+    padding-left: 8em !important;
+    padding-right: 8em !important;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  section {
+    flex-basis: 85%;
+  }
+  .text {
+    padding-left: 5em !important;
+    padding-right: 5em !important;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container::before {
+    background-position: top right;
+  }
+
+  section {
+    flex-basis: 95%;
+  }
+
+  section img,
+  section img.center,
+  section img.right,
+  section img.left {
+    display: block;
+    margin: 20px auto;
+    float: none;
+    width: 500px;
+    height: auto;
+  }
+
+  .text {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0;
+  }
+  section {
+    flex-basis: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  section img,
+  section img.center,
+  section img.right,
+  section img.left {
+    max-width: 350px;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .m-menu {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0px 20px;
+    position: static;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0px;
+    height: 50%;
+    width: 80%;
+    top: 40px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  nav li {
+    height: 100%;
   }
 }
