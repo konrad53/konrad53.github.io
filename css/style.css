@@ -271,8 +271,13 @@ section {
   /* width: 80%; */
 }
 
+.no-padding {
+  padding: 0;
+}
+
 div .text {
-  padding: 1em;
+  padding: 2em;
+  padding-top: 0;
 }
 
 .row {
@@ -480,7 +485,7 @@ footer a:hover {
   min-width: 300px;
   margin: auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .card p {
