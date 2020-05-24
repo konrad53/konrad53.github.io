@@ -188,7 +188,7 @@ nav {
 
 .post a {
   text-decoration: none;
-  color: #789eff;
+  color: dodgerblue;
 }
 
 .post h4 {
@@ -231,4 +231,28 @@ nav {
     font-size: 12px;
     width: 35px;
   }
+}
+
+/* Pagination links */
+.pagination {
+  margin: auto;
+}
+
+.pagination a {
+  color: #c0c0c0;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+  background-color: rgb(100, 100, 100);
 }
