@@ -212,7 +212,7 @@ nav li a:hover {
   height: 2px;
   background-color: #c0c0c0;
   margin: 5px;
-  box-shadow: 0px 1px 8px black;
+  /* box-shadow: 0px 1px 8px black; */
   transition: 0.3s;
 }
 
@@ -338,7 +338,7 @@ section img {
   height: 400px;
   width: auto;
   box-shadow: 0px 4px 10px 1px black;
-  border-radius: 1%;
+  border-radius: 0;
   margin: 30px;
 }
 
@@ -403,21 +403,21 @@ h3 {
 }
 
 .glow {
-  font-weight: lighter;
+  font-weight: normal;
 
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
 
 .glow2 {
-  font-weight: lighter;
+  font-weight: normal;
 
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
 }
 
 .glow3 {
-  font-weight: lighter;
+  font-weight: normal;
 
   text-shadow: 0px 0px 8px skyblue;
   text-transform: uppercase;
@@ -482,7 +482,7 @@ footer {
   box-shadow: 0px 0px 2px black;
   font-weight: 300;
   font-size: 14px;
-  text-shadow: 0px 1px 8px #000;
+  /* text-shadow: 0px 1px 8px #000; */
   color: #c0c0c0;
   z-index: 1;
 }
@@ -520,7 +520,7 @@ footer a:hover {
 
 .card {
   box-shadow: 0px 4px 10px 1px black;
-  border-radius: 1%;
+  border-radius: 0;
   max-width: 300px;
   min-width: 300px;
   margin: auto;
