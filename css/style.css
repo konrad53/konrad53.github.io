@@ -58,6 +58,10 @@ body {
   flex: 1;
 }
 
+#more {
+  display: none;
+}
+
 /* ? NAVBAR ********************************************************/
 
 nav {
@@ -69,6 +73,7 @@ nav {
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
+  min-height: 40px;
 
   font-weight: lighter;
   font-size: 14px;
@@ -78,6 +83,16 @@ nav {
   box-shadow: 0px 0px 2px black;
 
   z-index: 5;
+}
+
+nav h1 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  align-self: center;
+  color: #c0c0c0;
+  letter-spacing: 0.2em;
+  min-height: 40px;
 }
 
 /* LOGO ******************************************************/
@@ -96,6 +111,23 @@ nav {
   height: 100%;
   padding: 4px;
   cursor: pointer;
+}
+
+.logo2 {
+  color: dodgerblue;
+  transition: 0.4s;
+}
+
+nav h1 a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.4s;
+}
+
+nav h1 a:hover,
+span.logo2:hover {
+  color: #f1f1f1;
+  transition: 0.4s;
 }
 
 .logo:hover {
@@ -129,45 +161,45 @@ nav li a {
   justify-content: center;
   align-self: stretch;
   width: 100%;
-
+  font-weight: 500;
   color: #c0c0c0;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 
-  text-shadow: 0px 0px 8px #000;
+  /* text-shadow: 0px 0px 8px #000; */
   transition: letter-spacing 0.4s ease-out;
 }
 
 nav li a.active-gold {
   color: gold;
   letter-spacing: 0.3em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 nav li a.active-blue {
   color: dodgerblue;
   letter-spacing: 0.3em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 nav li a.active-red {
   color: rgb(255, 123, 0);
   letter-spacing: 0.3em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 nav li a.active-green {
   color: limegreen;
   letter-spacing: 0.3em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 nav li a:hover {
   color: white;
   letter-spacing: 0.3em;
   transition: 0.4s ease-in;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .m-menu {

@@ -190,6 +190,7 @@ nav {
 .post a {
   text-decoration: none;
   color: dodgerblue;
+  cursor: pointer;
 }
 
 .post h4 {
