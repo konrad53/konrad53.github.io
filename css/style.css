@@ -330,9 +330,11 @@ section p {
   font-weight: 300;
   font-size: 18px;
   text-align: justify;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   letter-spacing: 1px;
   line-height: 1.3em;
+  text-indent: 1em;
 }
 
 section.background {
