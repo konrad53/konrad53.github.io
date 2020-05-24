@@ -275,7 +275,7 @@ section {
   padding: 0;
 }
 
-div .text {
+.text {
   padding: 2em;
   padding-top: 0;
 }
@@ -291,14 +291,14 @@ div .text {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 2;
+  flex: 1;
 }
 
 .double-column {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 5;
+  flex: 2;
 }
 
 section img {
@@ -405,8 +405,13 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding: 0;
+  }
   section {
     flex-basis: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   section p {
