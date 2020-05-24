@@ -93,7 +93,7 @@ nav {
   flex-direction: column;
 
   /* align-items: flex-end; */
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   /* border-left: 1px solid #ffffff; */
   /* border-top-right-radius: 17px; */
   flex-basis: 100%;
@@ -117,6 +117,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   height: 3.8em;
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .topic-title {
@@ -174,6 +175,13 @@ nav {
   border-left: 1px solid white;
   background-color: #949494c5;
   transition: 0.3s;
+}
+
+.move-list {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
+  bottom: auto;
 }
 
 /* .post-column {
