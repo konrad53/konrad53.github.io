@@ -262,7 +262,9 @@ main.blog-bg {
 section {
   /* display: block; */
 
-  height: 100%;
+  /* height: 100%; */
+  padding-left: 2em;
+  padding-right: 2em;
 
   flex-basis: 85%;
   /* text-shadow: 0px 0px 1px black; */
@@ -326,6 +328,10 @@ section p {
   margin-bottom: 2em;
   letter-spacing: 1px;
   line-height: 1.3em;
+}
+
+section.background {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .initial::first-letter {
