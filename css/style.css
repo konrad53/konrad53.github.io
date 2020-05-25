@@ -670,7 +670,7 @@ footer a:hover {
     justify-content: space-between;
     padding: 0px 20px;
     height: 45px;
-    /* background-color: rgba(0, 0, 0, 0.85); */
+    background-color: rgba(0, 0, 0, 0.85);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
 
@@ -683,7 +683,7 @@ footer a:hover {
     height: 50%;
     width: 75%;
     top: 45px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: inherit;
 
     display: flex;
     flex-direction: column;
