@@ -681,15 +681,15 @@ footer a:hover {
     position: fixed;
     right: 0px;
     height: 50%;
-    width: 75%;
+    width: 100%;
     top: 45px;
     background-color: inherit;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transform-origin: top right;
-    transform: scale(0);
+    transform-origin: top;
+    transform: scaleY(0);
     transition: transform 0.4s ease-in-out;
   }
 

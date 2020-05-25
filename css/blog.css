@@ -330,6 +330,10 @@ body {
     display: none;
   }
 
+  #totop:hover {
+    filter: none;
+  }
+
   #totop {
     font-size: 12px;
     width: 35px;
@@ -337,11 +341,6 @@ body {
 
   #overlay-btn {
     display: flex;
-  }
-
-  #overlay-btn:hover {
-    filter: brightness(10%);
-    transition: 0.3s;
   }
 }
 
