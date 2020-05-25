@@ -199,7 +199,7 @@ body {
 .move-list {
   position: sticky;
   position: -webkit-sticky;
-  top: 20px;
+  top: 70px;
   bottom: auto;
 }
 
