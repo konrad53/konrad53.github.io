@@ -7,9 +7,9 @@ body {
   flex-basis: 60%;
 }
 
-nav {
+/* nav {
   position: static;
-}
+} */
 
 #overlay {
   position: fixed; /* Sit on top of the page content */
