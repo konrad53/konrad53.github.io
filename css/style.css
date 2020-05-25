@@ -199,25 +199,25 @@ nav li a {
 }
 
 nav li a.active-gold {
-  color: gold;
+  color: dodgerblue;
   letter-spacing: 0.3em;
   font-weight: 600;
 }
 
 nav li a.active-blue {
-  color: aqua;
+  color: dodgerblue;
   letter-spacing: 0.3em;
   font-weight: 600;
 }
 
 nav li a.active-red {
-  color: #ff4136;
+  color: dodgerblue;
   letter-spacing: 0.3em;
   font-weight: 600;
 }
 
 nav li a.active-green {
-  color: limegreen;
+  color: dodgerblue;
   letter-spacing: 0.3em;
   font-weight: 600;
 }
