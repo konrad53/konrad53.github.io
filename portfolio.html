@@ -96,27 +96,33 @@
                     </div>
 
                 </div>
+            </section>
+        </main>
 
+        <footer>
+            <p>©2020 <a href="mailto:konrad53@gmail.com">Konrad Górniak</a>.
+                All rights reserved.
+            </p>
+
+        </footer>
 
     </div>
-
-
-
-    </section>
-
-
-    </main>
-    <footer>
-        <p>©2020 <a href="mailto:konrad53@gmail.com">Konrad Górniak</a>.
-            All rights reserved.
-        </p>
-
-    </footer>
     <script src="/js/slide.js"></script>
     <!-- <script src="/js/navbar.js"></script> -->
 
 
-    </div>
+
+
+    <script>window.onscroll = function () { onScroll() };
+
+        function onScroll() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").className = "nav-shadow";
+            } else {
+                document.getElementById("navbar").className = "";
+            }
+        }
+    </script>
 </body>
 
 </html>

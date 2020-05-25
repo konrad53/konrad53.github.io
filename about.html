@@ -86,6 +86,17 @@
 
 
         </footer>
+
+        <script>window.onscroll = function () { onScroll() };
+
+            function onScroll() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("navbar").className = "nav-shadow";
+                } else {
+                    document.getElementById("navbar").className = "";
+                }
+            }
+        </script>
         <script src="/js/slide.js"></script>
         <!-- <script src="/js/navbar.js"></script> -->
 
