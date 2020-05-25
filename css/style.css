@@ -671,6 +671,8 @@ footer a:hover {
     padding: 0px 20px;
     height: 45px;
     /* background-color: rgba(0, 0, 0, 0.85); */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
 
     /* position: sticky; */
   }
