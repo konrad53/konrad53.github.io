@@ -222,13 +222,14 @@ body {
 
 .post a {
   text-decoration: none;
+  font-weight: 600;
   color: skyblue;
   cursor: pointer;
   transition: 0.4s;
 }
 
 .post a:hover {
-  color: goldenrod;
+  color: darkorange;
   transition: 0.4s;
 }
 
@@ -252,7 +253,7 @@ body {
 
 .post-title .data {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   position: absolute;
   height: 40px;
@@ -268,7 +269,7 @@ body {
   align-self: end;
   justify-self: flex-start;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   margin: 0px;
   color: #a1a1a1;
