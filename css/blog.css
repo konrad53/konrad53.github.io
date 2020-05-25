@@ -52,8 +52,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  text-decoration: none;
-  font-weight: 600;
   position: fixed;
   width: 60px;
   height: 50px;
@@ -61,13 +59,17 @@ body {
   right: 0vw;
   color: #c0c0c0;
   background-color: rgba(0, 0, 0, 0.1);
+  background-image: url("/img/arrow-up.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
   z-index: 99;
   cursor: pointer;
 }
 
 #totop:hover {
-  color: #fff;
-  transition: 0.4s;
+  filter: brightness(10%);
+  transition: 0.3s;
 }
 
 #hide-button {
